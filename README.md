@@ -24,8 +24,3 @@
   <img alt="Snake eating my GitHub contribution graph" src="https://raw.githubusercontent.com/blacksheep81/blacksheep81/output/github-snake.svg">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/blacksheep81/blacksheep81/output/breakout-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/blacksheep81/blacksheep81/output/breakout-light.svg">
-  <img alt="Breakout game played on my GitHub contribution graph" src="https://raw.githubusercontent.com/blacksheep81/blacksheep81/output/breakout-light.svg">
-</picture>
