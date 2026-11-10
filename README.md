@@ -6,4 +6,10 @@
 💻 Interested in C, Python and web development  
 🌱 Currently learning data structures and systems programming  
 🚀 You can also call me **Sputnik**  
-📫 Email me at [qq1149384952@gmail.com](mailto:qq1149384952@gmail.com)
+📫 Email me at `qq1149384952 [at] gmail.com`
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/blacksheep81/blacksheep81/output/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/blacksheep81/blacksheep81/output/github-snake.svg">
+  <img alt="Snake eating my GitHub contribution graph" src="https://raw.githubusercontent.com/blacksheep81/blacksheep81/output/github-snake.svg">
+</picture>
