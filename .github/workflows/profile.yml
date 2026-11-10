@@ -1,0 +1,65 @@
+name: Update profile
+
+on:
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      # Rewrite the "Recently working on" list between the RECENT markers in README.md
+      # with my latest-pushed public, non-fork repositories.
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const exclude = new Set([context.repo.repo, 'CSSE2010-assignment2']);
+            const { data } = await github.rest.repos.listForUser({ username: owner, sort: 'pushed', per_page: 50 });
+            const lines = data
+              .filter(r => !r.fork && !r.archived && !exclude.has(r.name))
+              .slice(0, 5)
+              .map(r => `- [${r.name}](${r.html_url})${r.description ? ` — ${r.description}` : ''} · ${r.pushed_at.slice(0, 10)}`);
+            const readme = fs.readFileSync('README.md', 'utf8');
+            const next = readme.replace(/(<!--RECENT:START-->)[\s\S]*?(<!--RECENT:END-->)/, `$1\n${lines.join('\n')}\n$2`);
+            fs.writeFileSync('README.md', next);
+
+      - name: Commit README if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || { git commit -m "Update recent projects"; git push; }
+
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - uses: cyprieng/github-breakout@v1.2.4
+        with:
+          github_username: ${{ github.repository_owner }}
+          output_path: breakout/
+
+      - name: Collect breakout SVGs
+        run: |
+          mv breakout/light.svg dist/breakout-light.svg
+          mv breakout/dark.svg dist/breakout-dark.svg
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
