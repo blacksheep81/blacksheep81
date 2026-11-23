@@ -11,11 +11,11 @@
 ## 🔨 Recently working on
 
 <!--RECENT:START-->
+- [quanx](https://github.com/blacksheep81/quanx) — 圈叉 · 从 Telegram 讨论整理的 Quantumult X 配置、分流规则与使用笔记 · 2026-11-23
 - [ui-design-toolkit](https://github.com/blacksheep81/ui-design-toolkit) — UI design skill with a five-step workflow, 20 design principles, resource catalog and source references · 2026-11-11
 - [XDrawer](https://github.com/blacksheep81/XDrawer) — X Drawer: a Chinese-language Chrome extension that keeps X bookmarks and likes in a local browser library · 2026-11-10
 - [musicloud](https://github.com/blacksheep81/musicloud) — macOS-first local and cloud music player. OneDrive and Google Drive planned. · 2026-11-10
 - [valorant-montage-director](https://github.com/blacksheep81/valorant-montage-director) — Valorant montage editing Agent Skill: five creative styles, prompts, and reference-aware workflows for everyday players. · 2026-11-10
-- [capri-codex-adapter](https://github.com/blacksheep81/capri-codex-adapter) — Unofficial Capri source animation preview and Codex pet candidate packaging tools. No character assets redistributed. · 2026-11-10
 <!--RECENT:END-->
 
 <picture>
