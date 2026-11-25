@@ -11,7 +11,7 @@
 ## 🔨 Recently working on
 
 <!--RECENT:START-->
-- [quanx](https://github.com/blacksheep81/quanx) — 圈叉 · 从 Telegram 讨论整理的 Quantumult X 配置、分流规则与使用笔记 · 2026-11-24
+- [quanx](https://github.com/blacksheep81/quanx) — 圈叉 · 从 Telegram 讨论整理的 Quantumult X 配置、分流规则与使用笔记 · 2026-11-25
 - [ui-design-toolkit](https://github.com/blacksheep81/ui-design-toolkit) — UI design skill with a five-step workflow, 20 design principles, resource catalog and source references · 2026-11-11
 - [XDrawer](https://github.com/blacksheep81/XDrawer) — X Drawer: a Chinese-language Chrome extension that keeps X bookmarks and likes in a local browser library · 2026-11-10
 - [musicloud](https://github.com/blacksheep81/musicloud) — macOS-first local and cloud music player. OneDrive and Google Drive planned. · 2026-11-10
